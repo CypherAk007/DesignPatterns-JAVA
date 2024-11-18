@@ -8,6 +8,15 @@ public class Student implements Prototype<Student> {
     private double averagePspOfBatch;
     private double studentPsp;
 
+    public Student(){}
+    public Student(Student other){
+        this.name = other.name;
+        this.age = other.age;
+        this.studentPsp = other.studentPsp;
+        this.gender =other.gender;
+        this.averagePspOfBatch = other.averagePspOfBatch;
+        this.batch =other.batch;
+    }
 
     public String getName() {
         return name;
@@ -59,15 +68,16 @@ public class Student implements Prototype<Student> {
 
     @Override
     public Student copy(){
-        Student student = new Student();
-        student.setName(this.name);
-        student.setAge(this.age);
-        student.setGender(this.gender);
-        student.setStudentPsp(this.studentPsp);
-        student.setAveragePspOfBatch(this.averagePspOfBatch);
-        student.setBatch(this.batch);
+//        Student student = new Student();
+//        student.setName(this.name);
+//        student.setAge(this.age);
+//        student.setGender(this.gender);
+//        student.setStudentPsp(this.studentPsp);
+//        student.setAveragePspOfBatch(this.averagePspOfBatch);
+//        student.setBatch(this.batch);
 
-        return student;
+//        Note : CUR INSTANCE WILL BE TAKEN AS PART OF OTHER OBJECT AND CREATED AND RETUREND
+        return new Student(this);
     }
 
     @Override

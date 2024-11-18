@@ -4,6 +4,15 @@ public class IntelligentStudent extends Student {
     private int iq;
     private double averageIqOfBatch;
 
+    public IntelligentStudent(){}
+
+    public IntelligentStudent(IntelligentStudent other){
+//        NOTE: WE ARE COPYING THE PRIVATE ATTRIBUTES OF PARENT CLASS
+        super(other);
+        this.iq = other.iq;
+        this.averageIqOfBatch = other.averageIqOfBatch;
+    }
+
     public double getAverageIqOfBatch() {
         return averageIqOfBatch;
     }
@@ -30,18 +39,6 @@ public class IntelligentStudent extends Student {
 
     @Override
     public IntelligentStudent copy(){
-        IntelligentStudent student = new IntelligentStudent();
-//        student.setName(this.name);
-//        student.setAge(this.age);
-
-//        We cant access the private variables directly - we need getters
-        student.setGender(this.getGender());
-//        student.setGender(this.gender);
-
-//        student.setStudentPsp(this.studentPsp);
-//        student.setAveragePspOfBatch(this.averagePspOfBatch);
-//        student.setBatch(this.batch);
-
-        return student;
+        return new IntelligentStudent(this);
     }
 }

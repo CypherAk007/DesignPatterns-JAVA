@@ -3,7 +3,6 @@ package O4_PrototypeRegistryImplementation_v1;
 public class IntelligentStudent extends Student{
     private int iq;
     private double averageIqOfBatch;
-
     public double getAverageIqOfBatch() {
         return averageIqOfBatch;
     }
@@ -37,7 +36,6 @@ public class IntelligentStudent extends Student{
 //        We cant access the private variables directly - we need getters
         student.setGender(this.getGender());
 //        student.setGender(this.gender);
-
 //        student.setStudentPsp(this.studentPsp);
 //        student.setAveragePspOfBatch(this.averagePspOfBatch);
 //        student.setBatch(this.batch);
