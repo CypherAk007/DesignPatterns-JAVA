@@ -2,14 +2,14 @@ package O4_PrototypeRegistryImplementation_v1;
 
 public class Client {
     public static void main(String[] args) {
-        Student student = new Student();
+        StudentRegistry registry = new StudentRegistry();
+        fillRegistry(registry);
+
+//        Student student = registry.get("Nov24");// This will modify the registry itself
+        Student student = registry.get("Nov24").copy();
         student.setName("AK");
         student.setAge(23);
         student.setGender("Male");
-        student.setStudentPsp(90);
-        student.setAveragePspOfBatch(95);
-        student.setBatch("Nov24");
-
         System.out.println(student);
 
         Student copyStudent = student.copy();
@@ -19,5 +19,19 @@ public class Client {
 
         System.out.println(copyStudent);
 
+    }
+
+    private static void fillRegistry(StudentRegistry registry){
+
+
+
+        Student nov24batch = new Student();
+
+        nov24batch.setStudentPsp(90);
+        nov24batch.setAveragePspOfBatch(95);
+        nov24batch.setBatch("Nov24");
+
+        registry.register("Nov24",nov24batch);
+        System.out.println(nov24batch);
     }
 }
