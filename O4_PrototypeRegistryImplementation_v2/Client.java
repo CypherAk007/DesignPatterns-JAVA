@@ -1,4 +1,4 @@
-package O4_PrototypeRegistryImplementation_v1;
+package O4_PrototypeRegistryImplementation_v2;
 
 public class Client {
     public static void main(String[] args) {
