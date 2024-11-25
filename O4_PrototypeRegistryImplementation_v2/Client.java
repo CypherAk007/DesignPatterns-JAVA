@@ -36,9 +36,6 @@ public class Client {
     }
 
     private static void fillRegistry(StudentRegistry registry){
-
-
-
         Student nov24batch = new Student();
 
         nov24batch.setStudentPsp(90);
