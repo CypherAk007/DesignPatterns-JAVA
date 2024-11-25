@@ -26,10 +26,13 @@ public class Client {
         System.out.println(nov24batchIntelligentStudent);
 
         IntelligentStudent nov24batchIntelligentStudent1 = (IntelligentStudent) registry.get("nov24batchIntelligentStudent").copy();
-        nov24batchIntelligentStudent.setName("BK");
-        nov24batchIntelligentStudent.setAge(33);
+        nov24batchIntelligentStudent1.setName("BK");
+        nov24batchIntelligentStudent1.setAge(33);
 
         System.out.println(nov24batchIntelligentStudent1);
+
+        Student othercopy = nov24batchIntelligentStudent1.copy();
+        System.out.println(othercopy);
     }
 
     private static void fillRegistry(StudentRegistry registry){
