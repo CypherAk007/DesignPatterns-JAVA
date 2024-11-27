@@ -1,9 +1,9 @@
 package O6_AdapterWithBankAdapterv2;
 
 public class UPI {
-    public boolean transfer(int amount, YesBankAPI yesBankAPI){
-        if(yesBankAPI.balanceCheck()>=amount){
-            System.out.println("UPI Transfer is successful");
+    public boolean transfer(int amount, PhonePeBankAPI bankAdapter) {
+        if (bankAdapter.balanceCheck() >= amount) {
+            System.out.println("Transfer is successful");
             return true;
         }
         return false;
