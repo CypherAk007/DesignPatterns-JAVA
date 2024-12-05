@@ -1,5 +1,5 @@
 package O11_Observer;
 
-//public interface OrderPlaceSubscriber {
-//    void onOrderPlaced();
-//}
+public interface OrderPlaceSubscriber {
+    void announceOrderPlaced();
+}
